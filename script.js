@@ -11,7 +11,7 @@ setInterval(updateClock, 1000);
 updateClock();
 
 // Metronome
-let bpm = 60;
+let bpm = 120; // Start at 120 BPM
 let subdivision = 1; // 1 = quarter, 2 = eighth, 4 = sixteenth
 let beatsPerMeasure = 4; // Default beats per measure
 let interval;
@@ -89,7 +89,7 @@ const playPauseButton = document.getElementById('play-pause');
 playPauseButton.addEventListener('click', () => {
   if (isPlaying) {
     stopMetronome();
-    playPauseButton.textContent = 'Play';
+    playPauseButton.textContent = 'Start';
   } else {
     startMetronome();
     playPauseButton.textContent = 'Pause';
@@ -102,6 +102,10 @@ const bpmSlider = document.getElementById('bpm');
 const bpmValue = document.getElementById('bpm-value');
 const bpmMinus = document.getElementById('bpm-minus');
 const bpmPlus = document.getElementById('bpm-plus');
+
+// Initialize BPM to 120
+bpmSlider.value = 120;
+bpmValue.textContent = 120;
 
 bpmSlider.addEventListener('input', (e) => {
   bpm = e.target.value;
