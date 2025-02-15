@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metronome</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Metronome</h1>
+    <div id="clock">12:00:00 PM</div>
+    <div class="controls">
+      <label for="bpm">BPM: <span id="bpm-value">60</span></label>
+      <div class="bpm-controls">
+        <button id="bpm-minus">-</button>
+        <input type="range" id="bpm" min="40" max="200" value="60">
+        <button id="bpm-plus">+</button>
+      </div>
+      <label for="beats">Beats per Measure: <span id="beats-value">4</span></label>
+      <div class="beats-controls">
+        <button id="beats-minus">-</button>
+        <input type="range" id="beats" min="1" max="12" value="4">
+        <button id="beats-plus">+</button>
+      </div>
+    </div>
+    <div class="subdivisions">
+      <button id="quarter">1/4</button>
+      <button id="eighth">1/8</button>
+      <button id="sixteenth">1/16</button>
+    </div>
+    <div class="metronome">
+      <div class="dots" id="dots-container"></div>
+    </div>
+    <button id="play-pause">Start</button>
+  </div>
+  <audio id="click-downbeat" src="click.wav"></audio>
+  <audio id="click-upbeat" src="click.wav"></audio>
+  <audio id="click-subdivision" src="click.wav"></audio>
+  <script src="script.js"></script>
+</body>
+</html>

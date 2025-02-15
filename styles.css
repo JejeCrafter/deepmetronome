@@ -1,0 +1,129 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: #ffffff;
+}
+
+.container {
+  text-align: center;
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+#clock {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.controls {
+  margin-bottom: 20px;
+}
+
+.bpm-controls,
+.beats-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.bpm-controls button,
+.beats-controls button {
+  padding: 5px 10px;
+  font-size: 1em;
+  cursor: pointer;
+  border: none;
+  background-color: #333333;
+  color: white;
+  border-radius: 5px;
+}
+
+.bpm-controls button:hover,
+.beats-controls button:hover {
+  background-color: #444444;
+}
+
+input[type="range"] {
+  width: 150px;
+  background: #444444;
+  border-radius: 5px;
+}
+
+.subdivisions {
+  margin-bottom: 20px;
+}
+
+.subdivisions button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border: none;
+  background-color: #555555;
+  color: white;
+  border-radius: 5px;
+}
+
+.subdivisions button:hover {
+  background-color: #666666;
+}
+
+.metronome {
+  font-size: 3em;
+  margin-top: 20px;
+}
+
+.dots {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.dot {
+  opacity: 0.3;
+  transition: opacity 0.1s;
+  color: #ffffff;
+}
+
+.dot.active {
+  opacity: 1;
+}
+
+.dot.main {
+  font-size: 1.5em;
+}
+
+.dot.subdivision {
+  font-size: 1em;
+  opacity: 0.2;
+}
+
+#play-pause {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+}
+
+#play-pause:hover {
+  background-color: #0056b3;
+}
